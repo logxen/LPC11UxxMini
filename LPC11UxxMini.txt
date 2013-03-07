@@ -1,0 +1,46 @@
+Partlist
+
+Exported from LPC11UxxMini.brd at 3/5/2013 12:40:40 PM
+
+EAGLE Version 6.3.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value                Package                Library                    Position (inch)       Orientation
+
+C1       18pF                 0603-CAP               SparkFun-Capacitors        (0.3 0.95)            R90
+C2       18pF                 0603-CAP               SparkFun-Capacitors        (0.2 0.85)            R180
+C3       18pF                 0603-CAP               SparkFun-Capacitors        (0.2125 0.3375)       R180
+C4       18pF                 0603-CAP               SparkFun-Capacitors        (0.3375 0.3375)       R0
+C5       10uF                 1206                   SparkFun-Capacitors        (0.575 1.0625)        R0
+C6       10uF                 1206                   SparkFun-Capacitors        (0.6375 1.2125)       R270
+C7       1uF                  0805                   SparkFun-Capacitors        (0.6125 1.375)        R270
+D1       B0540WS-7            SOD-323                SparkFun-DiscreteSemi      (0.3875 1.25)         R180
+LED1     20mA                 CHIPLED_0603_NOOUTLINE microbuilder               (0.5 0.35)            R0
+LED2     20mA                 CHIPLED_0603_NOOUTLINE microbuilder               (0.6 0.35)            R0
+Q1       BC857B               SOT23-3                SparkFun-DiscreteSemi      (0.175 1.1125)        R90
+R1       330 Ohm              0402-RES               SparkFun-Resistors         (0.45 0.35)           R270
+R2       200 Ohm              0402-RES               SparkFun-Resistors         (0.65 0.35)           R270
+R3       1.5kOhm              0402-RES               SparkFun-Resistors         (0.35 1.325)          R0
+R4       10kOhm               0402-RES               SparkFun-Resistors         (0.4375 0.075)        R90
+R5       10kOhm               0402-RES               SparkFun-Resistors         (0.3625 0.075)        R90
+R6       33 Ohm               0402-RES               SparkFun-Resistors         (0.25 0.4375)         R90
+R7       33 Ohm               0402-RES               SparkFun-Resistors         (0.3 0.4375)          R90
+R8       3kOhm                0402-RES               SparkFun-Resistors         (0.2625 1.075)        R90
+R9       24kOhm               0402-RES               SparkFun-Resistors         (0.3125 1.1)          R90
+R10      100 Ohm              0402-RES               SparkFun-Resistors         (0.3875 1.1875)       R0
+S1       Reset                TACTILE_SWITCH_SMD     SparkFun-Electromechanical (0.575 0.15)          R270
+S2       ISP                  TACTILE_SWITCH_SMD     SparkFun-Electromechanical (0.225 0.15)          R90
+U$1      USB-MICROB-SMDRECEPT USB-MICROB-RECEPT      logxen                     (0.4 1.6)             R180
+U1       LPC11Uxx             HVQFN32-5X5_3MMTHERMAL logxen                     (0.4125 0.675)        R315
+U2       MCP1252-33X50I/MS    MSOP8_0.65MM           logxen                     (0.525 1.225)         R0
+Y1       12MHz                CRYSTAL_2.5X2          microbuilder               (0.2 0.95)            R180
+
+JP1      M12PTH               1X12                   SparkFun-Connectors        (0.05 1.35)           R270
+JP2      M12PTH               1X12                   SparkFun-Connectors        (0.75 0.25)           R90
+JP4      I2C                  1X02                   SparkFun-Connectors        (0.175 0.525)         R90
+JP5      ADC                  1X02                   SparkFun-Connectors        (0.625 0.8)           R90
+
+*** Optional I2C Pull-Ups (Do not populate)
+R11      10kOhm               0402-RES               SparkFun-Resistors         (0.15 0.3375)         MR270
+R12      10kOhm               0402-RES               SparkFun-Resistors         (0.2125 0.3375)       MR270
