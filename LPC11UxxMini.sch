@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -61,6 +61,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="101" name="Patch_Top" color="12" fill="4" visible="yes" active="yes"/>
 <layer number="102" name="Mittellin" color="7" fill="1" visible="yes" active="yes"/>
@@ -1014,6 +1015,8 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<text x="0" y="5.08" size="0.4064" layer="99" align="center">SpiceOrder 1</text>
+<text x="0" y="-2.54" size="0.4064" layer="99" align="center">SpiceOrder 2</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -3637,9 +3640,9 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="1uF"/>
 <part name="P+8" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="U$2" library="logxen" deviceset="VIN" device=""/>
-<part name="LED2" library="microbuilder" deviceset="LED" device="0603_NOOUTLINE" value="20mA"/>
+<part name="STATUS" library="microbuilder" deviceset="LED" device="0603_NOOUTLINE" value="20mA"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="LED1" library="microbuilder" deviceset="LED" device="0603_NOOUTLINE" value="20mA"/>
+<part name="POWER" library="microbuilder" deviceset="LED" device="0603_NOOUTLINE" value="20mA"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="330 Ohm"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="200 Ohm"/>
 <part name="P+3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -3676,6 +3679,7 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="R11" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="10kOhm"/>
 <part name="R12" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="10kOhm"/>
 <part name="P+7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="JP9" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 </parts>
 <sheets>
 <sheet>
@@ -3703,9 +3707,9 @@ Pull-ups</text>
 <instance part="C7" gate="G$1" x="259.08" y="-7.62"/>
 <instance part="P+8" gate="1" x="190.5" y="0"/>
 <instance part="U$2" gate="G$1" x="248.92" y="111.76"/>
-<instance part="LED2" gate="G$1" x="30.48" y="17.78" rot="MR180"/>
+<instance part="STATUS" gate="G$1" x="30.48" y="17.78" rot="MR180"/>
 <instance part="GND4" gate="1" x="35.56" y="12.7"/>
-<instance part="LED1" gate="G$1" x="30.48" y="27.94" rot="MR180"/>
+<instance part="POWER" gate="G$1" x="30.48" y="27.94" rot="MR180"/>
 <instance part="R1" gate="G$1" x="17.78" y="27.94"/>
 <instance part="R2" gate="G$1" x="17.78" y="17.78"/>
 <instance part="P+3" gate="1" x="10.16" y="30.48"/>
@@ -3742,6 +3746,7 @@ Pull-ups</text>
 <instance part="R11" gate="G$1" x="177.8" y="55.88" rot="R90"/>
 <instance part="R12" gate="G$1" x="185.42" y="55.88" rot="R90"/>
 <instance part="P+7" gate="1" x="177.8" y="66.04"/>
+<instance part="JP9" gate="G$1" x="5.08" y="5.08"/>
 </instances>
 <busses>
 </busses>
@@ -3816,10 +3821,10 @@ Pull-ups</text>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="35.56" y1="27.94" x2="35.56" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="STATUS" gate="G$1" pin="C"/>
 <wire x1="35.56" y1="17.78" x2="35.56" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="17.78" x2="35.56" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="POWER" gate="G$1" pin="C"/>
 <wire x1="35.56" y1="27.94" x2="33.02" y2="27.94" width="0.1524" layer="91"/>
 <junction x="35.56" y="17.78"/>
 </segment>
@@ -4304,10 +4309,10 @@ Pull-ups</text>
 <wire x1="254" y1="-10.16" x2="259.08" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LED2_RESISTOR" class="0">
+<net name="STATUS_LED_RESISTOR" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="STATUS" gate="G$1" pin="A"/>
 <wire x1="22.86" y1="17.78" x2="25.4" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -4379,10 +4384,10 @@ Pull-ups</text>
 <wire x1="111.76" y1="5.08" x2="109.22" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LED1_RESISTOR" class="0">
+<net name="POWER_LED_RESISTOR" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="POWER" gate="G$1" pin="A"/>
 <wire x1="22.86" y1="27.94" x2="25.4" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>

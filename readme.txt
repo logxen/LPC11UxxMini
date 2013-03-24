@@ -2,8 +2,8 @@ LPC11Uxx Mini
 ----------------------------------------------------------------------------------
 
 This is a basic breakout board for the NXP LPC11U24 ARM Cortex-M0 microcontroller 
-with usb. It has a similar pinout to an Arduino Mini. However, the form factor of 
-the Proto1 board is 0.1" wider than an Arduino Mini.
+with usb. It has a similar pinout and form factor to an Arduino Mini. However, it
+is a bit longer to accomodate the usb and isp button.
 
 The MCP1252 vreg accepts from 2.5V to 5.5V for running off the RAW pin when usb is 
 not connected. When usb is connected the RAW pin provides access to the 'raw' 5V 
