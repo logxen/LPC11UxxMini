@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -3680,6 +3680,7 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="R12" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="10kOhm"/>
 <part name="P+7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="JP9" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="R13" library="SparkFun-Resistors" deviceset="RESISTOR" device="0402-RES" value="10kOhm"/>
 </parts>
 <sheets>
 <sheet>
@@ -3722,7 +3723,7 @@ Pull-ups</text>
 <instance part="P+4" gate="1" x="132.08" y="22.86"/>
 <instance part="R8" gate="G$1" x="116.84" y="5.08"/>
 <instance part="R9" gate="G$1" x="124.46" y="12.7" rot="R90"/>
-<instance part="R10" gate="G$1" x="78.74" y="7.62" rot="R90"/>
+<instance part="R10" gate="G$1" x="78.74" y="2.54" rot="R90"/>
 <instance part="GND5" gate="1" x="193.04" y="96.52"/>
 <instance part="GND6" gate="1" x="251.46" y="101.6"/>
 <instance part="U$1" gate="G$1" x="160.02" y="-12.7"/>
@@ -3747,6 +3748,7 @@ Pull-ups</text>
 <instance part="R12" gate="G$1" x="185.42" y="55.88" rot="R90"/>
 <instance part="P+7" gate="1" x="177.8" y="66.04"/>
 <instance part="JP9" gate="G$1" x="5.08" y="5.08"/>
+<instance part="R13" gate="G$1" x="88.9" y="2.54" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3855,6 +3857,9 @@ Pull-ups</text>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="99.06" y1="-25.4" x2="99.06" y2="-27.94" width="0.1524" layer="91"/>
 <junction x="99.06" y="-25.4"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="-2.54" x2="88.9" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-25.4" x2="99.06" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="XTALOUT" class="0">
@@ -4428,7 +4433,12 @@ Pull-ups</text>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
 <pinref part="U1" gate="G$1" pin="PIO0_3/USB_VBUS"/>
+<wire x1="78.74" y1="7.62" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="12.7" x2="78.74" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="12.7" x2="88.9" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="12.7" x2="88.9" y2="7.62" width="0.1524" layer="91"/>
+<junction x="78.74" y="12.7"/>
 </segment>
 </net>
 <net name="USB_VBUS" class="0">
@@ -4439,7 +4449,7 @@ Pull-ups</text>
 <pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="-7.62" x2="76.2" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="2.54" x2="78.74" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="-2.54" x2="78.74" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="78.74" y="-7.62"/>
 </segment>
 </net>
